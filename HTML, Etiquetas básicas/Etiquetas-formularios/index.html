@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Etiquetas para formularios</h1>
+    <form action="">                <!-- Se utiliza en primera instancia para enviar informacion de manera sincrona al servidor-->
+        <input type="text" placeholder="nombre"> <br>      <!--Caja de texto, con el atributo "type" y "Placeholder" para indicar que entrada se necesita-->
+        <input type="password" placeholder="Contraseña" name="" id=""> <br>
+    
+        <!-- Variantes de input en HTML -->
+        <input type="date" placeholder="Fecha" name="" id=""> <br>
+        <input type="email" placeholder="Correo" name="" id=""> <br>
+        <input type="color" name="" id=""> <br>
+        <input type="number"> <br>
+        <input type="month"> <br>
+        <input type="range" name="" id=""> <br>
+        <input type="datetime-local" name="" id=""> <br>
+        <br>
+        <input type="checkbox" name="opciones[]" id="chk1" value="1"><label for="chk1"> Opcion 1 </label> <br>        <!-- Atributo "Label" para poder dar click sobre "Opcion 1", y atributo "For" para que el checkbox lo reconozca como tal  -->
+        <label><input type="checkbox" name="opcion[]" id="" value="2"> Opcion 2 </label> <br>                         <!-- De esta manera funciona sin la necesidad de utilizar el ID -->
+        <label><input type="checkbox" name="opcion[]" id="" value="3"> Opcion 3 </label> <br>                         <!-- Utilizaremos el atributo "name" junto con el valor "opciones" para acceder a su informacion desde un lenguaje del lado del servidor-->
+        <label><input type="checkbox" name="opcion[]" id="" value="4"> Opcion 3 </label> <br>                         <!-- Utilizaremos el atributo "value" para darle valores a las opciones seleccionadas y asi poder utilizarlos-->
+        <br>
+        <label><input type="radio" name="opcion" id="" value="1"> opcion 1 </label> <br>                              <!-- El radio boton funciona de manera que solo uno este seleccionado, utilizando el atributo "name" y darles a todos el mismo valor, este caso "opcion"-->                                                                      
+        <label><input type="radio" name="opcion" id="" value="2"> opcion 2 </label> <br>                              <!-- Utilizaremos el atributo "value" para darle valores a las opciones seleccionadas y asi poder utilizarlos-->                                
+        <label><input type="radio" name="opcion" id="" value="3"> opcion 3 </label> <br>                                                                       
+        <label><input type="radio" name="opcion" id="" value="4"> opcion 4 </label> <br>                                                                       
+        <br>
+        <textarea name="" id="" cols="100" rows="10" placeholder="Direccion"></textarea>                            <!-- Caja de texto grande, que permite capturaar multiples lines y grandes cantidades de texto--> <!-- Atributo "cols" para visualizar el numero de columnas", atributo "rows" para numero de lineas a visualizar-->
+        <br><br>
+        Pais:
+        <select name="pais" id="pais">                                                <!-- "name" y "id" para poder acceder luego al valor seleccionado--><!-- Funcional para una crear una lista despegable-->
+            <option value="1">Honduras</option>                                       <!-- Para agregar opciones a la etiqueta "select" -->                       
+            <option value="2">Nicaragua</option>                                      <!-- Value para saber al valor de cada opcion -->             
+            <option value="3">Guatemala</option>                                                                               
+            <option value="4">El Salvador</option>                                                                               
+        </select> <br><br>
+        Paises que ha visitado:
+        Pais:
+        <select name="pais" id="pais" multiple>                                     <!-- Atributo "multiple" para seleccionar diferentes opciones-->                                                                 
+            <option value="1">Honduras</option>                                       <!-- Seleccion con shift o ctrl -->                                                                                                                                                                 
+            <option value="2">Nicaragua</option>                                                                                                                                                                                                        
+            <option value="3">Guatemala</option>                                                                                                                                                                                                        
+            <option value="4">El Salvador</option>                                                                               
+        </select> <br><br>
+
+        <input type="button" value="Click aqui">            <!-- Para crear un boton, y atributo "value" para lo que hira escrito en el boton --> <!-- Funcion agregada con JS -->
+        <input type="submit" value="Click aqui">            <!-- Peticiones sincronas -->
+        <button type="button">Click aqui</button>           <!-- Funcion agregada con JS --> <!-- Para crear un boton, y atributo "value" para lo que hira escrito en el boton -->
+        <button type="submit">Click aqui</button>           <!-- Peticiones sincronas -->
+
+    </form>
+</body>
+</html>

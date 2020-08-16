@@ -1,0 +1,16 @@
+            <div class="col-xl-2">
+                <div class="card"> <!--Quitamos es style-->    <!-- Copiado desde Bootstrap, debido a su similitud con lo que ocupamos-->
+                    <img src="img/app-icons/1.webp" class="card-img-top" alt="...">     <!-- Agregamos la img-->
+                    <div class="card-body">
+                        <h5 class="card-title">App 1</h5>
+                        <p class="card-text">Desarrollador: Facebook</p>
+                        <div>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>

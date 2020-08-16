@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+    <!-- Con action haremos contacto con php --> <!-- Metodo de envio y recibo de infor-->
+    <form action="procesar.php" method="GET">
+        <!-- El atributo name es vital para este tipo de peticiones asincronas -->
+        <input name="usuario" type="text" placeholder="Usuario">
+        <input name="password" type="password" placeholder="Contraseña">
+        
+        <!-- El boton tiene que ser tipo submit, ya que submir viene preprogramado para este tipo de peticiones -->
+        <button type="submit">Guardar</button>
+        <!-- Busca todo tipo de etiquetas de formularios que esten dentro de una etiqueta form, los encapsula y los envia, mediante el method, especificado en form, este caso GET-->
+    </form>
+
+
+    <!-- Con action haremos contacto con php --> <!-- Metodo de envio y recibo de infor-->
+    <form action="procesar.php" method="POST">
+        <!-- El atributo name es vital para este tipo de peticiones asincronas -->
+        <input name="usuarioP" type="text" placeholder="Usuario">
+        <input name="passwordP" type="password" placeholder="Contraseña">
+        
+        <!-- El boton tiene que ser tipo submit, ya que submir viene preprogramado para este tipo de peticiones -->
+        <button type="submit">Guardar</button>
+        <!-- Busca todo tipo de etiquetas de formularios que esten dentro de una etiqueta form, los encapsula y los envia, mediante el method, especificado en form, este caso GET-->
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+input:focus {
+    outline-width: 0;
+}
+
+.input-error {
+    border: 1px solid #ff0000;
+}
+
+.input-success {
+    border: 1px solid #00ff0d;
+}
+

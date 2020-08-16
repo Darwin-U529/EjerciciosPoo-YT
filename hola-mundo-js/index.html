@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="js/funciones.js"></script>    <!-- Importar funciones js desde archivo externo-->
+    <script>
+        mostrarMensaje('Ejecutando la Funcion');
+        mostrarAlert('Ejecutando la funcion como variable');
+        console.log('Sumar', sumar(5,7));
+    </script>
+    
+    <!--<script>                /* Etiqueta para incluir codigo JavaScript*/
+        //Comentarios de una linea
+        /* Comentarios de multiples lineas
+        */
+
+        //Tipos de declaracion de variables - Utilizaremos en mayormente "let"
+        var nombre = 'Juan';            //Este tipo de declaracion de variable, es en gran medida Global, o sea que la variable puede funcionar fuera de su bloque de inicializacion
+        let apellido = 'Perez';         //Este tipo de declaracion de variable, funciona mas que todo por bloques, o sea, no es global
+        const EDAD_MAXIMA = 100;        //Se utiliza mas que todo para objetos que por lo genera no cambian y son fijos
+        let edades = [12,34,55,66, 'Juan', 'Perez', 23, false, true];                //arreglo  //Se pueden incluir cualquier tipo de dato en el arreglo
+        for (let i = 0; i < edades.length; i++) {
+            console.log(edades[i]);
+            
+        }
+        
+        //Objetivos JavaScript (Javascript Object Notation /JSON)
+        let persona = {
+            nombre: 'Pedro', 
+            apellido: 'Martinez',
+            edad: 34,
+            fechaNacimiento : {
+                dia: 12,
+                mes: 12,
+                anio: 2012
+            }
+        };
+
+        let persona2 = {
+            nombre: 'Maria', 
+            apellido: 'Fernanda',
+            edad: 34,
+            fechaNacimiento : {
+                dia: 12,
+                mes: 12,
+                anio: 2012
+            }
+        };
+
+        let personas = [persona, persona2];     //Arreglo de JSON, imprimido en consola abajo, es posible
+
+        persona.genero = 'Masculino';       //Se puede agregar asi al JSON, solamente es desordenado hacerlo asi
+        persona['pais'] = 'Honduras';       //Tipo arreglo //Es posible agregar atributos junto con sus valores de esta forma
+
+        /*edades.push(89);            // push funciona como para agregar un nuevo elemento, en este caso al arreglo edades
+        edades.pop();               // Va quitando el ultimo valor del arreglo
+        edades.pop();
+        document.write(edades[8]);*/
+        /*document.write('Hola mundo');             //Escribir hola mundo*/
+        
+        /*Se puede concatenar de esta manera
+        document.write('Hola ' + nombre);*/
+
+        //Utilizando el acento invertido (acento grave), es posible concatenar dentro de las mismas incluyendo " ${} " y de igual manera trabajar operacion dentro de las {} o llamar un objeto, etc
+        document.write(`Hola ${persona.nombre} ${persona.apellido} (${persona.edad})`);  
+        
+        document.write(JSON.stringify(persona));            //La manera de convertir un JSON a cadena, ya que solo acepta texto
+
+        //alert('Hola mundo');                    //Muestra algo parecido a un modal, una alerta
+        console.log(personas);                    //No hay necesidad de aplicar stingify al momento de tirar a consola  
+        console.log(edades);
+        console.log('Hola mundo');              //Escribir en consola
+        console.error('Esto no es un error, aunque asi lo parezca');            //Escribir un error en consola
+        
+    </script> -->
+</body>
+</html>

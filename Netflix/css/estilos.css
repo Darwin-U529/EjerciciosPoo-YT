@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');            /*  Fuente importada desde Google Fonts*/
+
+@font-face {                                    /* Fuente creada, se puede utilizar en cualquier parte del archivo*/
+    font-family: 'Fuente Cool';                 /* Nombre de la fuenta, asi se pone al momento de utilizarla*/
+    src: url('../fonts/Lovely Rainy.ttf');      /* Si tiene espacios, es necesario poner comillas ' ' */
+}
+
+body {
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+#texto-prueba {
+    font-size: 1.5rem;
+}
+
+#contenido {                                                /* Aplicando al "div" de netflix en HTML*/
+    background-color: #00000080; 
+    height: 100vh;
+}
+
+#logo {
+    padding: 45px;
+    width: 160px;
+}
+
+
+#formulario {
+    background-color: #000000c9;
+    color: #ffffff;
+    width: 330px;
+    height: 500px;
+    border-radius: 5px;
+    padding: 30px 60px;
+    margin-left: auto; 
+    margin-right: auto; 
+    /*margin: auto;*/
+    /*transition: background-color 1s ease-in-out ;*/           /* Tipo de transiciones en la page, aplicada al hover con atributo "background-color" especificamente, que la embellecen, este caso crea una transicion en el Hover de 1seg, muy suave y agradable*/
+    transition: all 0.3s ease-in-out;       /* Esta transicion se aplica a todo el hover, como en este caso tambien toma el atributo "border" y el "bg" */
+}
+
+#formulario:hover {
+    background-color: #963e42;
+    border: 2px solid #ffffff;
+}
+
+#formulario h1 {
+    font-size: 32px;
+    font-weight: 700;
+    /*font-family: 'Fuente Cool';               Nombre de fuente "Creada", guardada en carpeta 'fonts'
+    font-family: 'Amatic SC', cursive;*/        /* Nombre de fuente importada desde Google Fonts*/
+
+}
+
+input {
+                /* Se habia aplicado los estilos al input completo, , pero genero problemas tocando todas las etiquetas, por eso utilizaremos la clase creada abajo*/    
+
+}
+
+.control {                      /* Crear una clase en CSS*/ /* parametros a lo largo del section*/   
+    width: 100%;            /*Al darle un 100%, el input no tiene en cuenta el paddig ni el resto, asi que hay que ajustarlo con la funcion de abajo 3ra*/
+    padding: 15px;
+    box-sizing: border-box;         /* Al no incluir las diferentes bordes, con esta opcion le decimos que las incluya y se ajuste*/
+    font-size: 1rem;                /* Tamaño de fuente, el rem es relativo, puede ser util para adaptarse a tamanos de pantalla, investigar*/
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-width: 0;          /* Es un relieve que tiene al contorno, el original no lo tiene*/
+    
+}
+
+.caja-texto {                   /* Esta agregado el color en el input*/
+    background-color: #333333;
+}
+
+.boton {
+    background-color: #E50914;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 1rem;
+    cursor: pointer;                /* Que el cursor cambia a una manita cuando esta sobre la etiquetas*/
+}
+
+.boton:hover {                  /* Funciona como eventos*/ /* Con esto creamos que cambie el color cuando el cursor pasa sobre el boton*/
+    background-color: #af0810;          /* Cuando pasa sobre el boton, se tinta mas oscuro*/ 
+    text-decoration: underline;           /* Agrega una linea en el texto del button, como evento al pasar el cursor sobre la etiqueta*/
+}
+
+#help-link {
+    float: right;                       /* Mueve el texto hacia el extremo derecho, igual puede ser vicebersa con left*/
+    color: #B3B3B3;
+    text-decoration: none;              /* Quitar el subrayado*/
+    font-size: 13px;
+
+}
+
+#help-link:hover {
+    text-decoration: underline;         /* Para subrallarlo cuando pasa el cursor*/
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {          /* Redefinimos cualquier etiqueta para esta cantidad de pixeles*/
+    #formulario {                       /* En este caso para formulario */
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        padding: 0px 18px; 
+        background-color: transparent;
+        
+    }
+
+    .control {
+        font-size: 0.8rem;
+    }
+
+    #contenido {
+        background-color: #000000e6;
+    }
+
+    #logo {
+        width: 75px;
+        padding-top: 20px;
+        padding-left: 12px;
+        padding-bottom: 0px;
+    }
+
+    #texto-prueba {
+        display: none;                  /* Funcion para que descaparzca la etiqueta*/
+    }
+ }
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {  }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {  }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  }

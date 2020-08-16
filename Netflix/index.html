@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/netflix.ico" type="image/x-icon">
+    <style>                                                         /* Estilos en Encabezado */
+        /* Comentarios CSS*/
+        body {
+            background-image: url(img/background.jpg);
+            background-repeat: no-repeat;                           /* Para que no se repita*/
+            background-size: cover;                                 /* Para adaptar toda la imagen al sitio*/
+            background-position: center center;                     /* Doble "Center" debido a que es en el eje X y en el eje Y*/
+            background-attachment: fixed;                           /* Para arreglar la imagen independiente de su tamaño, siempre estara fija*/
+            margin: 0;
+            
+        }        
+
+    </style>
+</head>
+<body style="background-color: #000000; color: #ffffff;">         <!-- Estilos en Linea-->                              
+    <div id="contenido">
+        <img id="logo" src="img/netflix.png" alt="">
+        <section id="formulario">
+            <h1>Sign in</h1>
+            <input class="control caja-texto" type="" placeholder="Email o phone number">                   <!-- Es posible agregar 2 clases, solamente separadas por un espacio-->
+            <input class="control caja-texto" type="" placeholder="Password">                               <!-- Asi poder utilizar clases pre creadas con parametros establecidos para diferentes etiquetas -->
+            <input class="control boton" type="button" value="Sign in">
+            <label ><input type="checkbox">Remember me</label>
+            <a href="#" id="help-link">Need help?</a>
+            <div id="texto-prueba">Texto visible solo en pantallas grandes</div>
+        </section>
+    </div>
+</body>
+</html>

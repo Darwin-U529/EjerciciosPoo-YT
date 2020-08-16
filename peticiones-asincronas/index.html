@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peticiones asincronas</title>
+</head>
+<body>
+
+    <input id="usuario" type="text" placeholder="Usuario"><br>
+    <input id="password" type="text" placeholder="password"><br>
+    
+    <!-- Para peticiones Asincronas, trabajamos con JS-->
+    <button type="button" onclick=" loginAJAXJQuery()"> login AJAX JQuery</button><br>
+    <button type="button" onclick=" loginAJAXAxios()"> login AJAX Axios</button><br>
+    <button type="button" onclick="otraAccion()">Otra Accion</button><br>
+    
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        function loginAJAXJQuery () {
+            let persona = {
+                usuario: document.getElementById('usuario').value,
+                password: document.getElementById('password').value
+            }
+
+            let urlencoded = `usuario=${document.getElementById('usuario').value}&password=${document.getElementById('password').value}`;
+            $.ajax({
+                url:'procesar.php',
+                method:'post',
+                //URLencoded ya esta probado, se puede ver el formato arriba, solo se cambiaria en el data,por los momentos en tipo JSON, haciendo solo un detalle en la parte de proeesar
+                data: JSON.stringify(persona), //Informacion que se va a enviar        //URLEncoded, JSON(cadena)
+                dataType:'json',        //Dato de retorno
+                success:function(res){      //el parametro es lo que nos envia el servidor
+                    console.log('Respuesta del Servidor (Ajax JQUERY)', res);
+                },
+                error:function(error){      //Se ejecutaria cuando ocurra un error de cualquier indole
+                    console.error(error);
+                }
+            });    
+        }
+
+        function loginAJAXAxios() {
+            let persona = {
+                usuario: document.getElementById('usuario').value,
+                password: document.getElementById('password').value
+            }
+
+            axios({
+                url: 'procesar.php',
+                method: 'post',
+                responseType: 'json',           //contrario de dataType pero para axios
+                data: persona //tipo de metodo POST
+                //params: persona, //tipo de metodo GET
+            })
+            //se incerta la funcion que se ejecutara cuando todo sale bien
+            .then((res)=>{
+                console.log('(AJAX Axios)', res);
+            }) 
+             //se incerta la funcion que se ejecutara cuando aparece un error
+            .catch((error)=>{
+                console.log('(AJAX Axios)', error);
+            });
+        }
+
+
+        function otraAccion() {
+            console.log("Otra accion");
+        }
+    </script>
+</body>
+</html>
