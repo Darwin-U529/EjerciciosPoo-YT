@@ -55,8 +55,9 @@
             $resultadoPost = array();
             for ($i=0; $i <sizeof($posts) ; $i++) { 
 
-                //con el in_array, verificamos el valor de "codigoUsuario" en el post[$i], esta o es el mismo que el que esta en $usuario["siguiendo"]
+                //in array, verifica si el valor "codigoUsuario" en el json posts[$i], se encuentra en el arreglo de "siguiendo" del json $usuario
                 if (in_array($posts[$i]["codigoUsuario"], $usuario["siguiendo"])){
+                    //Retorna un Booleano V o F
                     
                     //Si se cumple la condicion, ira entrando el post[$i], en el arreglo $resultadoPost[], y asi hasta terminar el ciclado
                     
