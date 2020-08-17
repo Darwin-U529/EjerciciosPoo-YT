@@ -110,5 +110,19 @@
     "contenidoPost": "Lorem ipsum -dolor sit amet consectetur adipisicing elit. Culpa distinctio libero perspiciatis a fugit iusto, beatae ab voluptates quaerat voluptatem magni dolor expedita ipsa eius unde. Earum reprehenderit ab doloremque.",
     "imagen": "img/posts/16.jpg",
     "cantidadLikes": 6
+  },
+  {
+    "codigoPost": 123,
+    "codigoUsuario": 1,
+    "contenidoPost": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa distinctio libero perspiciatis a fugit iusto, beatae ab voluptates quaerat voluptatem magni dolor expedita ipsa eius unde. Earum reprehenderit ab doloremque.",
+    "imagen": "img/posts/1.jpg",
+    "cantidadLikes": 0
+  },
+  {
+    "codigoPost": 223,
+    "codigoUsuario": 1,
+    "contenidoPost": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa distinctio libero perspiciatis a fugit iusto, beatae ab voluptates quaerat voluptatem magni dolor expedita ipsa eius unde. Earum reprehenderit ab doloremque.",
+    "imagen": "img/posts/1.jpg",
+    "cantidadLikes": 0
   }
 ]

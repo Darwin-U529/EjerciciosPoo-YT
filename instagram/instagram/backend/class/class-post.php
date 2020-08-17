@@ -106,6 +106,8 @@
         
             //Cerramos el flujo
             fclose($archivo);
+
+            echo '{"codigoResultado":1, "mensaje": "Post guardado con exito"}';
         }
 
         /**
