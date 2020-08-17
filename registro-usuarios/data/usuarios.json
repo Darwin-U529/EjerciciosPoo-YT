@@ -1,5 +1,0 @@
-[
-    {"nombre": "Juan", "apellido": "Perez", "fechaNacimiento": "12-12-2012", "pais": "Honduras"},
-    {"nombre": "Maria", "apellido": "Lainez", "fechaNacimiento": "12-12-2012", "pais": "Peru"},
-    {"nombre": "Luis", "apellido": "Lopez", "fechaNacimiento": "12-12-2012", "pais": "Guatemala"}
-]
