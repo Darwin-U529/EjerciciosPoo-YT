@@ -8,10 +8,23 @@
     //importamos el archivo " class-usuario.php " 
     include_once("../class/class-post.php");
     
+    //Necesario solamente si usamos AXIOS, ya que hay que poblarlo manualmente y en modo arreglo asociativo
+    $_POST = json_decode(file_get_contents('php://input'), true);
+
     //Utilizamos el switch para evaluar el metodo de la peticion con el REQUEST_METHOD
     switch($_SERVER['REQUEST_METHOD']){
-        case 'POST':    
-            //Guardar
+        case 'POST':    //Guardar
+            //Es necesario instanciar ya que el metodo utilizado no es static
+            $post = new Post(       //Atributos internos del Constructor (Obligatoria inicializarlos de esta manera)
+                $_POST['codigoPost'], 
+                $_POST['codigoUsuario'], 
+                $_POST['contenidoPost'], 
+                $_POST['imagen'], 
+                $_POST['cantidadLikes']
+            );
+
+            //Utilizamos la instancia, y de esta manera llamamos el metodo guardarPost() desde la clase class-post.php
+            $post->guardarPost();
         break;
 
         //Para los metodos obtenerUsuario() y obtenerUsuarios()

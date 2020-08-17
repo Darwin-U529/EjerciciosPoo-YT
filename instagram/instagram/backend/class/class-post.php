@@ -81,6 +81,33 @@
             echo json_encode($resultadoPost);
         }
 
+        public function guardarPost() {
+            $contenidoArchivoPosts = file_get_contents('../data/posts.json');
+            $posts = json_decode($contenidoArchivoPosts, true);
+
+            //De esta manera, el usuario ingresa los datos, y se van directamente a las variable originales guardandolas
+            $posts[] = array(
+                //De esta manera, estariamos agregando un nuevo arreglo asociativo al ya existente en $post, se posicionaria al final de los ya existentes
+
+                "codigoPost" => $this->codigoPost,
+                "codigoUsuario" => $this->codigoUsuario,
+                "contenidoPost" => $this->contenidoPost,
+                "imagen" => $this->imagen,
+                "cantidadLikes" => $this->cantidadLikes
+            );
+
+            //De esta manera empezaremos a ingresar al archivo
+            $archivo = fopen('../data/posts.json','w');
+                //Diciendole la ruta y 'w' indicando que sera escritura
+
+            //fwrite indicando que se ingresara a la variable $archivo (que contiene los datos de posts.json), y diciendole que ingresaran como cadena en formato JSON
+            fwrite($archivo, json_encode($posts));
+                //$archivo = archivo en el que entrara la nueva informacion, json_enconde($posts) = la informacion que entrara en el archivo y el formato con json_enconde (cadena en formato JSON)
+        
+            //Cerramos el flujo
+            fclose($archivo);
+        }
+
         /**
          * Get the value of codigoPost
          */ 
